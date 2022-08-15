@@ -7,59 +7,43 @@
 }
 .title em{
     font-weight: 800;
+    color: #ffd951;
 }
-.title:hover::after{
-    content: '';
-    display: inline-block;
 
-}
 
 .sc-about{
-    padding-top: 120px;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
 }
-.sc-about .img-box{
-    height: 50%;
-    width: 60%;
+.sc-about .title{
+    font-size: 100px;
+    animation: banner 15s infinite linear;
+
+
+
 }
-.sc-about img{
-    width: 100%; height: 100%;
-    object-fit: cover;
+@keyframes banner {
+    0% {
+        transform: translateX(50%);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+.sc-about .title span{
     display: block;
-}
-.sc-about .desc-area{
-    padding: 70px;
-    background-color: #ef8292;
-    position: relative;
-    z-index: 1;
-    width: 700px;
-    left: 50%;
-    top: 0px;
-    margin-left: 100px;
-    transform: translate(-50%, -50%);
-    box-sizing: border-box;
-    opacity: 0;
-}
-.sc-about .desc-area-mb{display: none;}
-.sc-about .desc-area .title{
-    font-size: 24px;
-    margin: 30px 0;
-}
-.sc-about .skill-list{}
-.sc-about .skill-item{
-    /* margin: 10px 0; */
-    padding: 10px 0;
-    border-bottom: 1px solid #fff;
-}
-.sc-about .skill-item span{
-    display: block;
-    margin: 5px 0;
-    line-height: 30px;
-    word-break: keep-all;
+    transition: .5s;
 }
 
 
-.sc-work{
-    margin-top: -400px;
+
+.sc-work .title{
+    opacity: 1;
 }
 .sc-work .work-list .num2,.sc-work .work-list .num4 ,.sc-work .work-list .num6{
     flex-direction: row-reverse;
@@ -84,7 +68,7 @@
     justify-content: space-between;
 }
 .sc-work .img-box{
-    width: calc(50% - 15px);
+    width: calc(50% - 30px);
     opacity: 0.5;
     transition: .8s;
     overflow: hidden;
@@ -124,9 +108,9 @@
 .sc-work .type{
     padding: 10px 20px;
     border-radius: 17px;
-    background-color: #ef8292;
+    background-color: #ffd951;
     font-weight: 700;
-    color: #fff;
+    color: #18181b;
     display: inline-block;
     margin-right: 20px;
 }
@@ -135,6 +119,9 @@
 .sc-contact{
     margin-top: 100px;
     display: flex;
+}
+.sc-contact .title{
+    opacity: 1;
 }
 .sc-contact .mail{
     display: inline-block;
@@ -162,18 +149,7 @@
 
 @media screen and (max-width: 1023px) {
     /* *768을보고 잡아야함 */
-    .sc-about .desc-area{display: none;}
-    .sc-about .desc-area-mb{
-        padding: 70px;
-    background-color: #ef8292;
     
-    z-index: 1;
-    width: 100%;
-    box-sizing: border-box;
-    /* opacity: 0; */
-    /* display: none; */
-    display: block;
-    }
     .sc-work{
         margin-top: 100px;
     }
@@ -196,10 +172,7 @@
         flex-wrap: wrap;
     }
   
-    /* .sc-contact .mail{
-        margin-left: 0;
-        line-height: 20px;
-    } */
+    
 
     .sc-contact .mail {
         display: inline-block;
@@ -211,22 +184,13 @@
 
 @media screen and (max-width: 767px) {
     /* *320을 보고 잡아야함 */
-    .title{
-        font-size: 40px;
-    }
-    .sc-about{
-        padding-top: 80px;
-    }
-    .sc-about .img-box{
-        width: 100%;
-    }
     .sc-about .title{
-        font-size: 30px;
-        margin: 30px 0;
+        font-size: 50px;
     }
-    .sc-about .desc-area-mb{
-        padding: 20px;
+    .title{
+        font-size: 50px;
     }
+   
     .sc-work .subtitle{
         font-size: 25px;
         line-height: 30px;

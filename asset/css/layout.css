@@ -1,57 +1,16 @@
 @import './reset.css';
 @import './common.css';
 
-.header {
-    height: 120px;
-    /* position: sticky; */
+.header{
+    padding: 10px;
     position: fixed;
-    width: 100%;
-    background-color: #020d1f;
-    z-index: 3;
-}
-
-.header .common-inner {
-    padding: 20px 50px;
-    height: 120px;
+    height: 36px;
     box-sizing: border-box;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    z-index: 1;
 }
-
-.header .btn-gnb {
-    padding: 5px 20px;
-    display: inline-block;
-    color: #a4a4a4;
-    font-size: 14px;
+.header em{
+    color: #ffd951;
 }
-
-.header .btn-gnb:hover {
-    color: #fff;
-}
-
-.header .btn-contact {
-    margin-left: 19px;
-    padding: 10px 20px;
-    border-radius: 17px;
-    background-color: #ef8292;
-    font-weight: 700;
-    color: #fff;
-    display: inline-block;
-}
-
-.header .btn-gnb:hover {
-    color: #fff;
-}
-
-.header .btn-gnb-mb {
-    display: none;
-}
-
-.header .gnb-area-mb {
-    display: none;
-}
-
 
 .footer {
     height: 100px;
@@ -85,91 +44,7 @@
 @media screen and (max-width: 1023px) {
 
     /* *768을보고 잡아야함 */
-    .hidden {
-        height: 100%;
-        min-height: 100%;
-        overflow: hidden;
-    }
-    .header .common-inner{
-        box-sizing: border-box;
-    }
-    .header .gnb-area {
-        display: none;
-    }
-
-    .header .btn-gnb-mb {
-        align-self: baseline;
-        height: 80px;
-        width: 40px;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-    }
-
-    .header .btn-gnb-mb i {
-        width: 6px;
-        height: 6px;
-        padding-right: 0;
-        padding-bottom: 0;
-        border-radius: 10px;
-        background-color: #fff;
-    }
-
-    .header .gnb-area-mb {
-        background-color: #020d1f;
-        position: fixed;
-        top: -100%;
-        width: 100%; height: 100%;
-        /* left: 0;
-        right: 0;
-        bottom: 0; */
-        left: 0;
-        transition: .5s;
-       z-index: 5;
-       display: block;
-
-    }
-
-    .header .gnb-area-mb.active {
-        top: 120px;
-        
-        
-    }
-
-    .header .gnb-area-mb nav {
-        display: flex;
-        flex-direction: column;
-        text-align: center;
-        justify-content: center;
-        align-items: center;
-        padding: 50px;
-        box-sizing: border-box;
-    }
-
-    .header .gnb-area-mb .btn-gnb {
-        font-size: 30px;
-        display: inline-block;
-        margin: 20px 0;
-        padding: 5px 50px 5px 20px;
-    }
-
-    .header .gnb-area-mb .btn-gnb::after {
-        content: '';
-        background-image: url(../images/arrow.svg);
-        height: 25px;
-        width: 25px;
-        background-repeat: no-repeat;
-        display: inline-block;
-        position: absolute;
-        margin-left: 10px;
-    }
-
-    .header .gnb-area-mb .btn-contact {
-        font-size: 30px;
-        display: inline-block;
-        margin: 20px 0;
-        width: 100%;
-    }
+    
 
 
 }
@@ -177,21 +52,5 @@
 @media screen and (max-width: 767px) {
 
     /* *320을 보고 잡아야함 */
-    .header {
-        height: 80px;
-    }
-
-    .header .common-inner {
-        height: 80px;
-    }
-
-    .header .btn-gnb-mb {
-        height: 40px;
-    }
-
-    .header .gnb-area-mb.active {
-
-        top: 80px;
-
-    }
+    
 }
