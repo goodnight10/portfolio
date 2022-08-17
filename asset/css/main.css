@@ -89,6 +89,15 @@
     word-break: keep-all;
     transition: .8s;
 }
+.sc-work .desc-box span{
+    display: inline-block;
+    border: 1px solid #727272;
+    border-radius: 10px;
+    font-size: 25px;
+    padding: 15px;
+    margin: 20px 0;
+    background: #18181b;
+}
 .sc-work .desc-box::after{
     content: '';
     position: relative;
@@ -189,6 +198,13 @@
     }
     .title{
         font-size: 50px;
+    }
+    .sc-work .desc-box span{
+        
+        font-size: 15px;
+        padding: 10px;
+        margin: 10px 0;
+        background: #18181b;
     }
    
     .sc-work .subtitle{
